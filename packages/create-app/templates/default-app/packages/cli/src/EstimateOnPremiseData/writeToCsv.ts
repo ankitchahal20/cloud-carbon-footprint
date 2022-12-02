@@ -25,15 +25,6 @@ export async function writeToCsv(
       { id: 'dailyUptime', title: 'dailyUptime' },
       { id: 'dailyKilowattHours', title: 'dailyKilowattHours' },
       { id: 'dailyCo2e', title: 'dailyCo2e' },
-      { id: 'weeklyUptime', title: 'weeklyUptime' },
-      { id: 'weeklyKilowattHours', title: 'weeklyKilowattHours' },
-      { id: 'weeklyCo2e', title: 'weeklyCo2e' },
-      { id: 'monthlyUptime', title: 'monthlyUptime' },
-      { id: 'monthlyKilowattHours', title: 'monthlyKilowattHours' },
-      { id: 'monthlyCo2e', title: 'monthlyCo2e' },
-      { id: 'annualUptime', title: 'annualUptime' },
-      { id: 'annualKilowattHours', title: 'annualKilowattHours' },
-      { id: 'annualCo2e', title: 'annualCo2e' },
     ],
   })
   await csvWriter.writeRecords(outputData)

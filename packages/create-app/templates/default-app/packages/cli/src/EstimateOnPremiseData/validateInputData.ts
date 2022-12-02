@@ -11,10 +11,7 @@ export const validateInputData = (inputData: OnPremiseDataInput[]) => {
       !inputRow.memory ||
       !inputRow.startTime ||
       !inputRow.endTime ||
-      !inputRow.dailyUptime ||
-      !inputRow.weeklyUptime ||
-      !inputRow.monthlyUptime ||
-      !inputRow.annualUptime
+      !inputRow.dailyUptime
     ) {
       throw new Error(
         'Input data is incorrect. Please check your input data file and try again.',

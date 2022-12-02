@@ -17,15 +17,6 @@ export default abstract class OnPremiseBillingDataRow {
   public dailyUptime: number
   public dailyKilowattHours: number
   public dailyCo2e: number
-  public weeklyUptime: number
-  public weeklyKilowattHours: number
-  public weeklyCo2e: number
-  public monthlyUptime: number
-  public monthlyKilowattHours: number
-  public monthlyCo2e: number
-  public annualUptime: number
-  public annualKilowattHours: number
-  public annualCo2e: number
 
   protected constructor(init: Partial<OnPremiseBillingDataRow>) {
     Object.assign(this, init)

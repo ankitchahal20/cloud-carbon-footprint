@@ -22,9 +22,6 @@ export default class OnPremiseDataReportRow extends OnPremiseBillingDataRow {
     )
     this.upTime = {
       daily: usageData.dailyUptime,
-      weekly: usageData.weeklyUptime,
-      monthly: usageData.monthlyUptime,
-      annual: usageData.annualUptime,
     }
     this.startTime = usageData.startTime
     this.endTime = usageData.endTime

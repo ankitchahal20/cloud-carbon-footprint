@@ -69,18 +69,12 @@ export default class OnPremiseDataReport {
       })
 
       if (upTimeEstimates) {
-        const { daily, weekly, monthly, annual } = upTimeEstimates
+        const { daily } = upTimeEstimates
 
         const appendedRows = {
           ...onPremiseDataRow,
           dailyKilowattHours: daily['dailyKilowattHours'],
           dailyCo2e: daily['dailyCo2e'],
-          weeklyKilowattHours: weekly['weeklyKilowattHours'],
-          weeklyCo2e: weekly['weeklyCo2e'],
-          monthlyKilowattHours: monthly['monthlyKilowattHours'],
-          monthlyCo2e: monthly['monthlyCo2e'],
-          annualKilowattHours: annual['annualKilowattHours'],
-          annualCo2e: annual['annualCo2e'],
         }
         results.push(appendedRows)
       }
