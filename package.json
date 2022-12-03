@@ -32,7 +32,7 @@
     "clean": "lerna run clean",
     "lint": "lerna run lint",
     "start": "concurrently \"yarn start-client\" \"yarn start-api\"",
-    "start-with-mock-data": "yarn workspace @cloud-carbon-footprint/client start-with-mock-data",
+    "launch-with-ibm-cloud-data": "yarn workspace @cloud-carbon-footprint/client launch-with-ibm-cloud-data",
     "start-client": "yarn workspace @cloud-carbon-footprint/client start",
     "start-api": "yarn workspace @cloud-carbon-footprint/api start",
     "start-cli": "yarn workspace @cloud-carbon-footprint/cli start",

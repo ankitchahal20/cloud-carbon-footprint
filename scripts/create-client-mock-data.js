@@ -7,7 +7,7 @@ const path = require('path')
 
 async function main() {
   const data = fs.readFileSync(
-    path.resolve(__dirname, `../packages/client/stub-server/mockData.json`),
+    path.resolve(__dirname, `../packages/client/stub-server/mockData1.json`),
     'utf8',
   )
 
@@ -20,7 +20,7 @@ async function main() {
   })
 
   fs.writeFileSync(
-    path.resolve(__dirname, `../packages/client/stub-server/mockData.json`),
+    path.resolve(__dirname, `../packages/client/stub-server/mockData1.json`),
     JSON.stringify(mockData),
     (err) => {
       if (err) {

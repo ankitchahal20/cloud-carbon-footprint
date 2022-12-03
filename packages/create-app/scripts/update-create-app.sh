@@ -19,4 +19,4 @@ cd ../../..
 npx @cloud-carbon-footprint/create-app-dev || exit 1
 echo "Starting app..."
 cd ccf-app
-yarn start-with-mock-data || exit 1
+yarn launch-with-ibm-cloud-data || exit 1

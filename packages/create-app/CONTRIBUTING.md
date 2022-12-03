@@ -14,7 +14,7 @@ From the root directory, you can run `yarn test-create-app`. This will subsequen
 - The create-app package with the modified name and version is then built and you will be prompted to login to NPM and the package will be published to the npm registry
 - The newly published create-app-dev package is then installed
 - When prompted to name the newly created app, you must enter `ccf-app`. This is imperative or else the rest of the script will fail.
-- The new app will be created within the create-app directory and the app will automatically start with the script `yarn start-with-mock-data`.
+- The new app will be created within the create-app directory and the app will automatically start with the script `yarn launch-with-ibm-cloud-data`.
 - The create-app package.json is then cleaned up to revert back to the original.
 - Now you are able to confirm that the app runs and performs as expected.
 

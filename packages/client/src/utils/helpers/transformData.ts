@@ -183,7 +183,7 @@ const useFilterDataFromEstimates = (
 
   useEffect(() => {
     const serviceEstimates = pluck('serviceEstimates', data).flat()
-
+    console.log(serviceEstimates)
     const accountNames: DropdownOption[] = []
     const serviceNames: DropdownOption[] = []
 
