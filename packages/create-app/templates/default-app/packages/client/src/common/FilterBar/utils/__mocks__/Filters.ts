@@ -19,14 +19,14 @@ export class Filters {
 
   withAccounts(): {
     timeframe: number
-    services: []
+    resources: []
     accounts: []
     cloudProvider: DropdownOption[]
     dateRange: null
   } {
     return {
       timeframe: 12,
-      services: [],
+      resources: [],
       accounts: [],
       cloudProvider: [
         { key: 'all', name: 'All Cloud Providers' },

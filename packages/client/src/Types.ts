@@ -41,7 +41,7 @@ export interface FilterOptions {
 
 export interface FilterResultResponse {
   accounts: DropdownOption[]
-  services?: DropdownOption[]
+  resources?: DropdownOption[]
   recommendationTypes?: DropdownOption[]
   regions?: DropdownOption[]
 }
@@ -132,19 +132,19 @@ export type EmissionsAndRecommendationResults = {
 
 export enum ChartDataTypes {
   REGION = 'region',
-  SERVICE = 'service',
+  SERVICE = 'resources',
   ACCOUNT = 'account',
 }
 
 export enum UnknownTypes {
   UNKNOWN_REGION = 'Unknown Region',
-  UNKNOWN_SERVICE = 'Unknown Service',
+  UNKNOWN_SERVICE = 'Unknown Resources',
   UNKNOWN_ACCOUNT = 'Unknown Account',
   UNKNOWN_RECOMMENDATION_TYPE = 'Unknown Recommendation Type',
 }
 
 export enum DropdownFilterOptions {
-  SERVICES = 'services',
+  SERVICES = 'resources',
   CLOUD_PROVIDERS = 'cloudProviders',
   ACCOUNTS = 'accounts',
   RECOMMENDATION_TYPES = 'recommendationTypes',
@@ -161,7 +161,7 @@ export const barChartCustomColors: string[] = [
 
 export const filterLabels: FilterLabelMapping = {
   [DropdownFilterOptions.ACCOUNTS]: 'Accounts',
-  [DropdownFilterOptions.SERVICES]: 'Services',
+  [DropdownFilterOptions.SERVICES]: 'resources',
   [DropdownFilterOptions.CLOUD_PROVIDERS]: 'Cloud Providers',
   [DropdownFilterOptions.REGIONS]: 'Regions',
   [DropdownFilterOptions.RECOMMENDATION_TYPES]: 'Recommendation Types',

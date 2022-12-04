@@ -13,7 +13,7 @@ import { EmissionsFilters } from '../../../pages/EmissionsMetricsPage/EmissionsF
 describe('useFilters', () => {
   describe('changing timeframe', () => {
     const estimationResults = generateEstimations(moment.utc(), 14)
-    const filteredResult: FilterResultResponse = { accounts: [], services: [] }
+    const filteredResult: FilterResultResponse = { accounts: [], resources: [] }
     let result: RenderResult<UseFiltersResults>
 
     beforeEach(() => {

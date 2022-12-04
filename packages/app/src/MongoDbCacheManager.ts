@@ -227,11 +227,11 @@ export default class MongoDbCacheManager extends CacheManager {
     startDate: Date,
     endDate: Date,
   ) {
-    const { cloudProviders, accounts, services, regions, tags } = request
+    const { cloudProviders, accounts, resources, regions, tags } = request
     const filterTable = {
       cloudProvider: cloudProviders,
       accountId: accounts,
-      serviceName: services,
+      serviceName: resources,
       region: regions,
     }
     let aggregationFilters = {

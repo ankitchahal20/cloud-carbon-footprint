@@ -35,7 +35,7 @@ describe('ServiceFilter', () => {
   let page: RenderResult
   let filters: Filters
 
-  const allServiceOption = { key: 'all', name: 'All Services' }
+  const allServiceOption = { key: 'all', name: 'All Resources' }
   const S3ServiceOption = { key: 's3', name: 'S3', cloudProvider: 'aws' }
   const ebsServiceOption = { key: 'ebs', name: 'EBS', cloudProvider: 'aws' }
   const ec2ServiceOption = { key: 'ec2', name: 'EC2', cloudProvider: 'aws' }

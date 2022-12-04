@@ -35,7 +35,7 @@ const EmissionsFilterBar: FunctionComponent<FilterBarProps> = ({
     ]
 
     const allServiceDropdownOptions = buildAndOrderDropdownOptions(
-      filterOptions?.services,
+      filterOptions?.resources,
       [{ key: '', name: '' }],
     )
     const serviceOptions: DropdownOption[] = [
@@ -45,7 +45,7 @@ const EmissionsFilterBar: FunctionComponent<FilterBarProps> = ({
 
     return {
       accounts: accountOptions,
-      services: serviceOptions,
+      resources: serviceOptions,
       cloudProviders: CLOUD_PROVIDER_OPTIONS,
     }
   }

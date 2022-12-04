@@ -15,7 +15,7 @@ const ServiceFilter: FunctionComponent<FilterProps> = ({
   setFilters,
   options,
 }) => {
-  const serviceOptions = options.services
+  const serviceOptions = options.resources
   return (
     <FilterDropdown
       id="services-filter"
@@ -24,7 +24,7 @@ const ServiceFilter: FunctionComponent<FilterProps> = ({
         DropdownFilterOptions.SERVICES,
       )}
       options={serviceOptions}
-      selections={filters.options.services}
+      selections={filters.options.resources}
       selectionToOption={(service: DropdownOption) => service}
       updateSelections={(selections: DropdownOption[]) =>
         setFilters(

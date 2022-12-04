@@ -13,7 +13,7 @@ import {
 export default class Region {
   constructor(
     public id: string,
-    public services: ICloudService[],
+    public resources: ICloudService[],
     public emissionsFactors: CloudConstantsEmissionsFactors,
     public constants: CloudConstants,
   ) {}
@@ -23,8 +23,8 @@ export default class Region {
     endDate: Date,
   ): Promise<{ [service: string]: FootprintEstimate[] }> {
     const estimates: FootprintEstimate[][] = await Promise.all(
-      this.services.map(async (service) => {
-        return await service.getEstimates(
+      this.resources.map(async (resources) => {
+        return await resources.getEstimates(
           startDate,
           endDate,
           this.id,
@@ -35,20 +35,20 @@ export default class Region {
     )
 
     return estimates.reduce((estimatesMap: RegionEstimates, estimate, i) => {
-      estimatesMap[this.services[i].serviceName] = estimate
+      estimatesMap[this.resources[i].serviceName] = estimate
       return estimatesMap
     }, {})
   }
 
   public async getCosts(startDate: Date, endDate: Date): Promise<RegionCosts> {
     const estimates: Cost[][] = await Promise.all(
-      this.services.map(async (service) => {
+      this.resources.map(async (service) => {
         return await service.getCosts(startDate, endDate, this.id)
       }),
     )
 
     return estimates.reduce((estimatesMap: RegionCosts, estimate, i) => {
-      estimatesMap[this.services[i].serviceName] = estimate
+      estimatesMap[this.resources[i].serviceName] = estimate
       return estimatesMap
     }, {})
   }

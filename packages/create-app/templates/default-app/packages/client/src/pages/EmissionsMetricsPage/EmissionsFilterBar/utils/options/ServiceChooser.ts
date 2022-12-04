@@ -20,7 +20,7 @@ export class ServiceChooser extends OptionChooser {
   ) {
     super(
       DropdownFilterOptions.SERVICES,
-      filterOptions.services,
+      filterOptions.resources,
       selections,
       oldSelections,
       filterOptions,
@@ -68,7 +68,7 @@ export class ServiceChooser extends OptionChooser {
     const cloudProviderSelections: Set<DropdownOption> =
       new Set<DropdownOption>()
 
-    for (const service of this.filterOptions.services.filter(
+    for (const service of this.filterOptions.resources.filter(
       (service) => service.key !== 'all',
     )) {
       if (keys.includes(service.key)) {

@@ -31,7 +31,7 @@ export const ALL_ACCOUNTS_DROPDOWN_OPTION: DropdownOption = {
   cloudProvider: '',
 }
 
-export const ALL_SERVICES_VALUE = 'All Services'
+export const ALL_SERVICES_VALUE = 'All Resources'
 export const ALL_SERVICES_DROPDOWN_OPTION: DropdownOption = {
   key: ALL_KEY,
   name: ALL_SERVICES_VALUE,

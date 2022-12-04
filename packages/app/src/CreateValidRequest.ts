@@ -28,7 +28,7 @@ export interface EstimationRequest {
   skip?: number
   cloudProviders?: string[]
   accounts?: string[]
-  services?: string[]
+  resources?: string[]
   regions?: string[]
   tags?: Tags
 }
@@ -46,7 +46,7 @@ interface FormattedEstimationRequest {
   skip?: string
   cloudProviders?: string[]
   accounts?: string[]
-  services?: string[]
+  resources?: string[]
   regions?: string[]
   tags?: Tags
 }
@@ -68,7 +68,7 @@ const validate = (
     skip,
     cloudProviders,
     accounts,
-    services,
+    resources,
     regions,
     tags,
   } = request
@@ -119,13 +119,13 @@ const validate = (
   const filters: { [key: string]: string[] } = {
     'cloud providers': cloudProviders,
     accounts,
-    services,
+    resources,
     regions,
   }
   const filterValidators: { [char: string]: RegExp } = {
     'cloud providers': /^[A-Z]+$/, // only capital letters
     accounts: /^[A-Za-z0-9_-]*$/, // letters, numbers, and dashes/underscores
-    services: /^[A-Za-z0-9\s]*$/, // letters. numbers and spaces
+    resources: /^[A-Za-z0-9\s]*$/, // letters. numbers and spaces
     regions: /^[A-Za-z0-9-]*$/, // letters, numbers, and dashes
   }
 

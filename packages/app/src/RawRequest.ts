@@ -12,7 +12,7 @@ export interface FootprintEstimatesRawRequest {
   skip?: string
   cloudProviders?: string[]
   accounts?: string[]
-  services?: string[]
+  resources?: string[]
   regions?: string[]
   tags?: Tags
 }

@@ -46,7 +46,7 @@ const FootprintApiMiddleware = async function (
     skip: req.query.skip?.toString(),
     cloudProviders: req.query.cloudProviders as string[],
     accounts: req.query.accounts as string[],
-    services: req.query.services as string[],
+    resources: req.query.resources as string[],
     regions: req.query.regions as string[],
     tags: req.query.tags as Tags,
   }

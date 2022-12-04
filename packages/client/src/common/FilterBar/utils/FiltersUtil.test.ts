@@ -111,7 +111,7 @@ describe('filterUtil', () => {
       { key: '123123123', name: 'testaccount2', cloudProvider: 'gcp' },
       { key: '123412341', name: 'testaccount3', cloudProvider: 'gcp' },
     ],
-    services: [
+    resources: [
       { key: 'all', name: 'All Services' },
       { key: 'ebs', name: 'EBS', cloudProvider: 'aws' },
       { key: 'ec2', name: 'EC2', cloudProvider: 'aws' },

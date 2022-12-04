@@ -44,8 +44,8 @@ describe('GCPAccount', () => {
     })
 
     const GCPAccount = require('../application/GCPAccount').default
-    const services = new GCPAccount(['us-east1']).getServices()
-    expect(services).toHaveLength(0)
+    const resources = new GCPAccount(['us-east1']).getServices()
+    expect(resources).toHaveLength(0)
   })
 
   it('should throw error if unknown service', () => {

@@ -27,7 +27,7 @@ export default class CloudProviderAccount {
       region.getCosts(startDate, endDate),
     ])
 
-    const estimatesGroupByService: EstimationResult[][] = region.services.map(
+    const estimatesGroupByService: EstimationResult[][] = region.resources.map(
       (service) => {
         const estimates: FootprintEstimate[] =
           regionEstimates[service.serviceName]

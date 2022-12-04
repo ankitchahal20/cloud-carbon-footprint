@@ -43,7 +43,7 @@ export class AccountChooser extends OptionChooser {
       if (!currentCloudProvider) return
       const cloudProviderKeys = pluck(
         'key',
-        this.filterOptions.services.filter(
+        this.filterOptions.resources.filter(
           (service) => service.cloudProvider === currentCloudProvider.key,
         ),
       )
@@ -54,7 +54,7 @@ export class AccountChooser extends OptionChooser {
           currentCloudProvider,
         )
       ) {
-        this.oldSelections.services.forEach((oldServiceOption) => {
+        this.oldSelections.resources.forEach((oldServiceOption) => {
           const hasKey = cloudProviderKeys.includes(oldServiceOption.key)
           hasKey && desiredSelections.add(oldServiceOption)
         })
@@ -63,7 +63,7 @@ export class AccountChooser extends OptionChooser {
         cloudProviderKeys.forEach((service) =>
           desiredSelections.add(
             <DropdownOption>(
-              this.filterOptions.services.find(
+              this.filterOptions.resources.find(
                 (option) => option.key === service,
               )
             ),
