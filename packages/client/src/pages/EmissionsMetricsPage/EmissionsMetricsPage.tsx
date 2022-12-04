@@ -7,7 +7,7 @@ import { Grid } from '@material-ui/core'
 import moment, { unitOfTime } from 'moment'
 import LoadingMessage from '../../common/LoadingMessage'
 import EmissionsFilterBar from './EmissionsFilterBar'
-import CarbonIntensityMap from './CarbonIntensityMap'
+//import CarbonIntensityMap from './CarbonIntensityMap'
 import CarbonComparisonCard from './CarbonComparisonCard'
 import EmissionsBreakdownCard from './EmissionsBreakdownCard'
 import EmissionsOverTimeCard from './EmissionsOverTimeCard'
@@ -82,7 +82,7 @@ export default function EmissionsMetricsPage({
               />
             </Grid>
           </Grid>
-          <CarbonIntensityMap />
+          {/* <CarbonIntensityMap /> */}
         </Grid>
       </div>
     </div>
